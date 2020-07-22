@@ -1,0 +1,17 @@
+<div class="w-100 col-12 user-info">
+    <div class="row">
+        <div class="col-12 w-100" *ngIf="user.description != ''">
+            <app-info-card [header]="'About Me'" [info]="user.description"></app-info-card>
+        </div>
+        <div class="col-12 w-100" *ngIf="user.description == ''">
+            <app-info-card [header]="'About Me'" [info]="'Edit Your Profile and tell everyone more about you'"></app-info-card>
+        </div>
+        <div class="col-12 w-100 mt-3" *ngIf="user.hobbies != ''">
+            <app-info-card [header]="'Hobbies'" [info]="user.hobbies"></app-info-card>
+        </div>
+        <div class="col-12 w-100 mt-3" *ngIf="user.hobbies == ''">
+            <app-info-card [header]="'Hobbies'" [info]="'Edit Your Profile and tell everyone more about your hobbies'"></app-info-card>
+        </div>
+    </div>
+    
+</div>

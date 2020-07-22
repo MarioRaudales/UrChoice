@@ -1,0 +1,7 @@
+<div *ngIf="hasSession">
+  <app-navbar></app-navbar>
+</div>
+
+<div *ngIf="!hasSession">
+  <app-navbar-logout></app-navbar-logout>
+</div>

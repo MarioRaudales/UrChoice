@@ -1,0 +1,56 @@
+<div class="mb-5 mb-xl-0 col-lg-12">
+  <div class="card card-profile">
+    <div class="row justify-content-center mb-0">
+      <div class="col-lg-3 order-lg-2">
+        <div class="card-profile-image">
+          <a href="javascript:void(0)">
+            <img *ngIf="user.photoURL !== ''" src="{{user.photoURL}}" class="rounded-circle">
+            <img *ngIf="user.photoURL === ''"
+              src="https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg"
+              class="rounded-circle">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card-header border-0 pt-5 pt-md-4 pb-0 pb-md-4 shadow">
+      <div class="d-flex justify-content-between">
+        <a href="javascriptS:void(0)" class="btn btn-primary my-4">Follow</a>
+        <a href="javascript:void(0)" class="btn btn-primary my-4 float-right">Message</a>
+      </div>
+    </div>
+    <div class="card-body pt-0 pt-md-4">
+      <div class="row">
+        <div class="col">
+          <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+            <div>
+              <span class="heading">{{user.followers}}</span>
+              <span class="description">Followers</span>
+            </div>
+            <div>
+              <span class="heading">{{user.following}}</span>
+              <span class="description">Following</span>
+            </div>
+            <div>
+              <span class="heading">{{user.votationCreated}}</span>
+              <span class="description">Votations Created</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <h3>
+          {{user.first_name}}<span class="font-weight-light">, {{user.age}}</span>
+        </h3>
+        <div class="h5 font-weight-300" *ngIf="user.city !== '' && user.country !== '' ">
+          <i class="ni location_pin mr-2"></i>{{user.city}},{{user.country}}
+        </div>
+        <div class="h5 mt-4" *ngIf="user.work !== ''">
+          <i class="ni business_briefcase-24 mr-2"></i>{{user.work}}
+        </div>
+        <div *ngIf="user.education !== ''">
+          <i class="ni education_hat mr-2"></i>{{user.education}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div *ngIf="user.bannerURL !== ''" class="header pb-8 pt-5 pt-lg-8 rounded-lg d-flex align-items-center" style="min-height: 600px; background-image: url({{user.bannerURL}}); background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask user-banner"></span>
+    <!-- Header container -->
+    <div class="container-fluid d-flex align-items-center">
+      <div class="row w-100">
+        <div class="col-8 ">
+          <h1 class="display-2 text-white">Hello {{user.first_name}}</h1>
+          <p class="text-white mt-0 mb-5">{{user.bannerMessage}}</p>
+          <a href="edit-profile" class="btn btn-primary my-4">Edit profile</a>
+        </div>
+      </div>
+    </div>
+</div>
+<div *ngIf="user.bannerURL === ''" class="header pb-8 pt-5 pt-lg-8 rounded-lg d-flex align-items-center" style="min-height: 600px; background-color:black; background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask user-banner"></span>
+    <!-- Header container -->
+    <div class="container-fluid d-flex align-items-center">
+      <div class="row w-100">
+        <div class="col-8 ">
+          <h1 class="display-2 text-white">Hello {{user.first_name}}</h1>
+          <p class="text-white mt-0 mb-5">{{user.bannerMessage}}</p>
+          <a href="edit-profile" class="btn btn-primary my-4">Edit profile</a>
+        </div>
+      </div>
+    </div>
+</div>
